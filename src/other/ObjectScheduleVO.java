@@ -12,23 +12,23 @@ import java.util.List;
  * 将不同课程表对象抽象一个父类ObjectScheduleVO
  * 子类只需要继承ObjectScheduleVO就可以调用getListByDescHour按照时分秒进行排序
  */
-@Data
+//@Data
 public class ObjectScheduleVO {
 
-    @DateTimeFormat(pattern = "HH:mm:ss")
-    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd")
+//    @DateTimeFormat(pattern = "HH:mm:ss")
+//    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd")
     private Date startmonth;
 
-    @DateTimeFormat(pattern = "HH:mm:ss")
-    @JsonFormat(timezone = "GMT+8", pattern = "HH:mm:ss")
+//    @DateTimeFormat(pattern = "HH:mm:ss")
+//    @JsonFormat(timezone = "GMT+8", pattern = "HH:mm:ss")
     private Date starthour;
 
-    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd HH:mm:ss")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date starttime;
 
-    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    @JsonFormat(timezone = "GMT+8", pattern = "yyyy.MM.dd HH:mm:ss")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date endtime;
 
     public static void main(String[] args) {
@@ -80,5 +80,37 @@ public class ObjectScheduleVO {
             }
         }
         return list;
+    }
+
+    public Date getStartmonth() {
+        return startmonth;
+    }
+
+    public void setStartmonth(Date startmonth) {
+        this.startmonth = startmonth;
+    }
+
+    public Date getStarthour() {
+        return starthour;
+    }
+
+    public void setStarthour(Date starthour) {
+        this.starthour = starthour;
+    }
+
+    public Date getStarttime() {
+        return starttime;
+    }
+
+    public void setStarttime(Date starttime) {
+        this.starttime = starttime;
+    }
+
+    public Date getEndtime() {
+        return endtime;
+    }
+
+    public void setEndtime(Date endtime) {
+        this.endtime = endtime;
     }
 }
